@@ -1,0 +1,131 @@
+/* General styling for the header */
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .site-branding {
+    display: flex;
+    align-items: center;
+  }
+  
+  .site-logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  nav.site-navigation {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav.site-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav.site-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav.site-navigation ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+  }
+  
+  /* Mobile Menu Toggle */
+  .site-navigation-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Dropdown for mobile menu */
+  .site-navigation-dropdown {
+    display: none;
+  }
+  
+  .site-navigation-dropdown ul {
+    flex-direction: column;
+  }
+  
+  .site-navigation-dropdown ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Media queries for responsive behavior */
+  @media (max-width: 768px) {
+    /* Hide navigation for smaller screens and show the toggle button */
+    nav.site-navigation {
+      display: none;
+    }
+  
+    .site-navigation-toggle {
+      display: block;
+    }
+  
+    .site-navigation-dropdown {
+      display: none;
+    }
+  
+    /* Style for dropdown menu when activated */
+    .site-navigation-dropdown.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 20px;
+    }
+  
+    .site-navigation-dropdown ul li a {
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+  
+    .site-navigation-dropdown ul li a:hover {
+      background-color: #444;
+    }
+  }
+  
+  /* Media query for mobile logo */
+  @media (max-width: 480px) {
+    .site-logo img {
+      width: 150px;
+    }
+  
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav.site-navigation ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav.site-navigation ul li {
+      width: 100%;
+    }
+  
+    nav.site-navigation ul li a {
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+    }
+  }
+  
