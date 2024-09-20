@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+.career-header {
+  color: #333;
+  text-align: start;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.career-subheader {
+  font-weight: bold;
+}
+.career-section {
+  border: 2px solid; /* Default border color */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Fixed height for both sections */
+}
+.new-job-seeker {
+  background-color: #015a9c; /* Blue background */
+  color: white; /* White text */
+  border-color: #015a9c; /* Blue border */
+}
+.seasoned-professional {
+  background-color: #fe8943; /* Orange background */
+  color: white; /* White text */
+  border-color: #fe8943; /* Orange border */
+}
+.career-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  height: 600px; /* Increased height */
+}
+.career-item {
+  flex: 1 1 45%; /* Adjusts item width */
+  margin: 10px; /* Space between items */
+  height: 500px;
+}
+.form-group {
+  margin-bottom: 30px;
+}
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+.form-control {
+  border: 1px solid #ccc; /* Light border */
+}
+
+.file-input {
+  width: 100%; /* Increase width */
+  border: 1px solid #ccc; /* Light border for file input */
+  padding: 10px; /* Add some padding */
+}
+
+.job-seeker-form {
+  max-width: 600px; /* Reduced width for form */
+  margin-left: 0; /* Align the form to the left */
+}
+p {
+  flex-grow: 1; /* Allow paragraph to grow */
+  margin: 0; /* Remove default margin */
+  overflow: auto; /* Handle overflow */
+}
+.upload-header {
+  color: #015a9c;
+  font-weight: bold;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Reduce padding on body */
+  }
+
+  .career-header {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .career-section {
+    padding: 15px; /* Reduced padding */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .career-container {
+    flex-direction: column; /* Stack career items */
+    gap: 40px; /* Reduced gap */
+    height: auto; /* Adjust height */
+  }
+
+  .career-item {
+    flex: 1 1 100%; /* Full width for items */
+    margin: 0; /* No margin between items */
+  }
+
+  .job-seeker-form {
+    max-width: 100%; /* Full width for form */
+  }
+
+  .form-group {
+    margin-bottom: 20px; /* Reduced margin */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  body {
+    padding: 5px; /* Further reduce padding */
+  }
+
+  .career-header {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .career-section {
+    padding: 10px; /* Further reduced padding */
+    height: auto; /* Let height adjust */
+  }
+
+  .career-container {
+    flex-direction: column; /* Ensure items are stacked */
+    gap: 20px; /* Further reduced gap */
+  }
+
+  .career-item {
+    flex: 1 1 100%; /* Full width on mobile */
+  }
+
+  .job-seeker-form {
+    max-width: 100%; /* Full width for mobile */
+    padding: 10px; /* Add some padding */
+  }
+
+  input[type="date"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="url"],
+  select,
+  textarea {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .upload-header {
+    font-size: 16px; /* Smaller header size */
+  }
+}

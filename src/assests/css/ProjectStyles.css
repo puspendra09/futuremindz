@@ -1,0 +1,400 @@
+/* Base Styles */
+body {
+    font-family: "Roboto", "Sans-serif";
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #32cd32;
+    padding: 16px; /* Added padding for better spacing */
+}
+
+main {
+    display: flex;
+    justify-content: space-between; /* Space out sections */
+    align-items: center;
+    gap: 40px; /* Increased gap for more space */
+    height: 80vh;
+    padding: 64px; /* Padding around main content */
+}
+
+section {
+    max-width: 50%; /* Limit width for text content */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    gap: 18px; /* Space between items */
+}
+
+button {
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #015A9C;
+    padding: 15px 30px; /* Consistent padding */
+    color: white;
+}
+
+.mylabel {
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+h1 {
+    color: #033053;
+    font-weight: bolder;
+}
+
+#img-section {
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+}
+
+.section1_img {
+    width: 100%; /* Make image responsive */
+    max-width: 700px; /* Limit maximum width */
+    height: 700px; /* Maintain aspect ratio */
+    border-bottom-left-radius: 200px; /* Optional: Rounded corners */
+}
+
+img {
+    width: 100%; /* Make image responsive */
+    max-width: 500px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.navbar {
+    margin-bottom: 20px; /* Adds space below the navbar */
+    padding: 10px 20px; /* Adds padding inside the navbar */
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.navbar-nav {
+    gap: 15px; /* Add gap between nav links */
+}
+
+.nav-link {
+    margin: 0; /* Remove default margin */
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: #32cd32; /* Change color on hover */
+}
+
+.dropdown-item:hover {
+    background-color: #cad3cb; /* Change background on hover */
+}
+
+.Technology-Spotlight {
+    background-color: #C9DCEA;
+}
+
+.checkbox-container {
+    color: white; /* Text color */
+}
+
+.checkbox-container label {
+    cursor: default; /* Makes it clear the checkboxes are uncheckable */
+    margin-bottom: 8px; /* Space between checkbox labels */
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none; /* Removes default checkbox style */
+    width: 20px; /* Custom width */
+    height: 20px; /* Custom height */
+    border: 2px solid white; /* Border for checkbox */
+    margin-right: 8px; /* Space between checkbox and label */
+    background-color: transparent; /* Background color */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Center align content */
+    margin: 20px 0; /* Space around the section */
+}
+
+.divider {
+    display: flex;
+    align-items: center; /* Center the line and text */
+    width: 50%; /* Full width */
+    margin-bottom: 20px; /* Space below the divider */
+}
+
+.divider-separator {
+    flex-grow: 1; /* Make the line grow */
+    height: 2px; /* Thickness of the line */
+    background-color: #015A9C; /* Line color */
+    margin: 0 10px; /* Space around the line */
+}
+
+.description {
+    text-align: start; /* Center the text */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+.description h5 {
+    line-height: 1.6; /* Adjust line spacing for readability */
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Adjust font size if needed */
+    color: #333; /* Adjust text color for better contrast */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack labels vertically */
+}
+
+.checkbox-group label {
+    cursor: default; /* Clear indication of uncheckable */
+    margin-bottom: 8px; /* Space between checkboxes */
+}
+
+#home-section {
+    display: flex;
+    justify-content: center; /* Center align content */
+    align-items: center; /* Center vertically */
+    padding: 40px; /* Padding around the section */
+    background-color: #f0f8ff; /* Light background color */
+}
+
+.homepage-container {
+    text-align: center; /* Center text within the container */
+    max-width: 800px; /* Limit maximum width */
+    background-color: white; /* Background for the content */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.homepage-container h1 {
+    font-size: 24px; /* Heading size */
+    color: #333; /* Heading color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.homepage-container p {
+    font-size: 16px; /* Paragraph size */
+    color: #666; /* Paragraph color */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-box1 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #015A9C;
+    padding: 55px; /* Uniform padding */
+    color: white;
+}
+
+.text-box2 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #FE8943;
+    padding: 55px; /* Uniform padding */
+    color: white;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+.background-image {
+    background-image: url('../images/contactus.jpg'); /* Background image */
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+.image-container img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.form-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Space fields evenly */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+    flex: 1; /* Allow fields to take equal space */
+    margin-right: 20px; /* Space between fields */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* No margin for the last field */
+}
+
+input,
+textarea {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Full width */
+}
+
+button {
+    padding: 10px;
+    background-color: #015A9C; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.sendmsg {
+    font-weight: lighter;
+}
+
+.message-box {
+    border: 2px solid red;
+    padding: 10px;
+    color: red;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none; /* Hidden elements */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack navbar items */
+        padding: 10px; /* Less padding */
+    }
+
+    main {
+        flex-direction: column; /* Stack main content */
+        padding: 20px; /* Reduced padding */
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    section {
+        max-width: 100%; /* Full width on smaller screens */
+        margin: 0 auto; /* Center align */
+    }
+
+    #img-section {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images */
+    }
+
+    .section1_img {
+        max-width: 100%; /* Full width for small screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    h1 {
+        font-size: 22px; /* Smaller heading */
+    }
+
+    .description h5 {
+        font-size: 16px; /* Smaller description text */
+    }
+
+    button {
+        padding: 8px; /* Smaller button padding */
+        font-size: 14px; /* Smaller button text */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack flex items */
+        gap: 20px; /* Space between items */
+    }
+
+    .form-section {
+        flex-direction: column; /* Stack form fields */
+        padding: 20px; /* Reduced padding */
+        gap: 20px; /* Increased gap */
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack fields vertically */
+    }
+
+    .form-group {
+        margin-right: 0; /* No right margin */
+        margin-bottom: 15px; /* Space between fields */
+    }
+
+    .form-group:last-child {
+        margin-bottom: 0; /* No margin for the last field */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 5px; /* Less padding */
+        display: flex; /* Use flexbox for positioning */
+        justify-content: space-between; /* Space between brand and toggler */
+        align-items: center; /* Center items vertically */
+        position: relative; /* Ensure positioning works */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Align the toggler button to the right */
+    }
+
+    #img-section {
+        margin-top: 20px; /* Space above the SVG section */
+        display: flex;
+        flex-direction: column; /* Ensure images stack vertically */
+        align-items: center; /* Center images horizontally */
+    }
+
+    .section1_img {
+        max-width: 100%; /* Full width for small screens */
+        margin-bottom: 20px; /* Space below the image */
+    }
+}

@@ -1,119 +1,71 @@
 import React from "react";
-import '../assests/css/header.css'
-import Logo from "../assests/images/logo.png";
+import '../assests/css/ProjectStyles.css'
+import Logo from "../assests/images/FuturemindzLogo.svg";
 
 function Header() {
   return (
-    <div className="header-inner">
-      <div className="site-branding show-logo">
-        <div className="site-logo show">
-          <a
-            href="http://www.futuremindz.com/"
-            className="custom-logo-link"
-            rel="home"
-            aria-current="page"
-          >
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             <img
-              width={184}
-              height={121}
               src={Logo}
-              className="custom-logo"
               alt="Futuremindz"
-              decoding="async"
+              height={118}
+              width={121}
+              className="d-inline-block align-text-top"
             />
-          </a>{" "}
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav ms-auto">
+              {" "}
+              {/* Aligns links to the right */}
+              <a className="nav-link " href="/">
+                Home
+              </a>
+              <a className="nav-link" href="/service">
+                Services
+              </a>
+              <div className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Careers
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/career-page">
+                      Job Seekers
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/career">
+                      Career Opportunities
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a className="nav-link" href="/contact-us" target="_self">
+                Contact Us
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <nav className="site-navigation show" aria-label="Main menu">
-        <ul id="menu-main-menu" className="menu">
-          <li
-            id="menu-item-162"
-            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-38 current_page_item menu-item-162"
-          >
-            <a href="http://www.futuremindz.com/" aria-current="page">
-              Home
-            </a>
-          </li>
-          <li
-            id="menu-item-300"
-            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-300"
-          >
-            <a href="http://www.futuremindz.com/service/">Services</a>
-          </li>
-          <li
-            id="menu-item-164"
-            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-164"
-          >
-            <a href="#">Careers</a>
-            <ul className="sub-menu">
-              <li
-                id="menu-item-1159"
-                className="menu-item menu-item-type-custom menu-item-object-custom menu-item-1159"
-              >
-                <a href="http://www.futuremindz.com/career-page/">
-                  Job Seekers
-                </a>
-              </li>
-              <li
-                id="menu-item-1160"
-                className="menu-item menu-item-type-custom menu-item-object-custom menu-item-1160"
-              >
-                <a href="http://www.futuremindz.com/career/">
-                  Career Opportunities
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            id="menu-item-1207"
-            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1207"
-          >
-            <a href="http://www.futuremindz.com/contact-us/">Contact us</a>
-          </li>
-        </ul>
       </nav>
-      <div className="site-navigation-toggle-holder show">
-        <button type="button" className="site-navigation-toggle">
-          <span className="site-navigation-toggle-icon" />
-          <span className="screen-reader-text">Menu</span>
-        </button>
-      </div>
-      <nav
-        className="site-navigation-dropdown show"
-        aria-label="Mobile menu"
-        aria-hidden="true"
-        inert=""
-      >
-        <ul id="menu-main-menu-1" className="menu">
-          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-38 current_page_item menu-item-162">
-            <a href="http://www.futuremindz.com/" aria-current="page">
-              Home
-            </a>
-          </li>
-          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-300">
-            <a href="http://www.futuremindz.com/service/">Services</a>
-          </li>
-          <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-164">
-            <a href="#">Careers</a>
-            <ul className="sub-menu">
-              <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-1159">
-                <a href="http://www.futuremindz.com/career-page/">
-                  Job Seekers
-                </a>
-              </li>
-              <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-1160">
-                <a href="http://www.futuremindz.com/career/">
-                  Career Opportunities
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1207">
-            <a href="http://www.futuremindz.com/contact-us/">Contact us</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
   );
 }
 

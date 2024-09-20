@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0; /* Remove default margin */
+  background-color: #fff;
+}
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+}
+.service {
+  background: #fff;
+  margin: 20px 10%; /* Set left/right margin to 10% */
+  padding: 20px;
+  border-radius: 35px; /* Increased border radius */
+  box-shadow: none; /* No shadow initially */
+  transition: box-shadow 0.3s;
+  display: flex; /* Flexbox for zigzag layout */
+  align-items: center;
+  line-height: 1.8; /* Increased line spacing */
+  min-height: 250px; /* Set a consistent minimum height for all services */
+  position: relative; /* For positioning the invisible line */
+}
+.service:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+.service:nth-child(even) {
+  flex-direction: row-reverse; /* Zigzag effect for even items */
+}
+.service img {
+  width: 300px; /* Doubled the width for images */
+  margin: 10px; /* Add margin around images */
+  border-radius: 10px; /* Round image corners */
+}
+.service::after {
+  content: ""; /* Empty content for the invisible line */
+  display: block;
+  height: 0; /* No height, making it invisible */
+  border-top: 1px solid transparent; /* Invisible border */
+  margin: 20px 0; /* Spacing for the invisible line */
+}
+h1 {
+  color: black; /* Heading color */
+  font-weight: bold; /* Bolder text */
+  text-transform: uppercase; /* Capitalize text */
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px; /* Reduce padding on body */
+  }
+
+  h1 {
+    font-size: 24px; /* Slightly smaller heading size */
+  }
+
+  .service {
+    margin: 20px 5%; /* Reduced margins for better fit */
+    padding: 15px; /* Reduced padding */
+    flex-direction: column; /* Stack elements in service */
+    align-items: center; /* Center items */
+  }
+
+  .service img {
+    display: none; /* Hide images on mobile */
+  }
+
+  h1 {
+    font-size: 20px; /* Adjust heading size */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  body {
+    padding: 0 5px; /* Further reduce padding */
+  }
+
+  h1 {
+    font-size: 20px; /* Smaller heading size */
+  }
+
+  .service {
+    margin: 15px 0; /* Margin adjustments for mobile */
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .service img {
+    display: none; /* Hide images on mobile */
+  }
+
+  h1 {
+    font-size: 18px; /* Smaller heading size */
+  }
+}

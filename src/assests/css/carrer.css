@@ -1,0 +1,189 @@
+body {
+    font-family: inherit;
+    background-color: inherit;
+    padding: 20px;
+    height: auto;
+  }
+  .center-container {
+    display: flex;
+    justify-content: center; /* Center the job listings */
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center items */
+    height: auto;
+  }
+  .job-listing {
+    display: none; /* Initially hidden */
+    padding: 15px;
+    margin: 10px 10px; /* Left and right margin */
+    width: 100%; /* Full width for proper centering */
+    max-width: 1000px; /* Set a maximum width */
+    height: auto; /* Set a uniform height */
+  }
+  .position-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  .details {
+    margin: 5px 0;
+    color: #555;
+  }
+  .salary-tag,
+  .profession-tag {
+    padding: 6px 20px;
+    font-size: 13px;
+    border-radius: 27px;
+    margin-right: 10px; /* Space between tags */
+    color: white;
+    cursor: pointer;
+  }
+  .salary-tag {
+    background-color: #2b93ff; /* Dark blue for salary tag */
+  }
+  .profession-tag {
+    background-color: darkgreen; /* Dark green for profession tag */
+  }
+  .dummy-photo {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    border: 1px solid #ccc; /* Optional: Light border for the photo container */
+    border-radius: 8px; /* Optional: Rounded corners for the photo container */
+  }
+
+  .dummy-photo img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Ensure the image fits the height */
+    object-fit: contain; /* Maintain aspect ratio while covering the area */
+  }
+
+  .job-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the start */
+    margin: 10px 0; /* Margin between job containers */
+    padding-bottom: 20px; /* Bottom padding for each job container */
+    border-radius: 10px;
+    padding: 5px; /* Corrected padding syntax */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Darker shadow effect */
+  }
+
+  .job-container-toggle {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align items to the start */
+    padding-bottom: 20px; /* Bottom padding for each job container */
+    padding: 5px; /* Corrected padding syntax */
+    border: 1px solid lightgray;
+    margin-left: 17%; /* Margin between job containers */
+    margin-right: 17%; /* Margin between job containers */
+  }
+  .location-icon {
+    color: #007bff; /* Icon color */
+    margin-right: 5px; /* Space between icon and text */
+  }
+  .button-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; /* Space between buttons */
+  }
+
+  .button-container button {
+    background-color: white; /* White background for buttons */
+    border: 1px solid lightgray; /* Light border for buttons */
+    color: #0056b3; /* Dark blue text */
+    transition: background-color 0.3s, color 0.3s, outline 0.3s; /* Smooth transition for hover effects */
+    height: 40px; /* Height of the buttons */
+    width: 150px; /* Width of the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: 2px solid transparent; /* Default outline */
+  }
+
+  .button-container button:hover,
+  .button-container button:active {
+    background-color: black; /* Black background on hover and click */
+    color: white; /* White text on hover and click */
+    outline: 2px solid white; /* Outline color on hover and click */
+  }
+
+  .button-container button:focus {
+    outline: 2px solid #0056b3; /* Outline color when focused */
+  }
+  /* Tablet Styles */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px; /* Reduce padding on body */
+    }
+
+    .center-container {
+      align-items: center; /* Center items */
+      padding: 0; /* Remove extra padding */
+    }
+
+    .job-listing {
+      padding: 10px; /* Reduced padding */
+      margin: 10px 0; /* Adjust margins */
+    }
+
+    .position-title {
+      font-size: 1.3em; /* Smaller title size */
+    }
+
+    .salary-tag,
+    .profession-tag {
+      font-size: 12px; /* Smaller font size for tags */
+      padding: 5px 15px; /* Reduced padding */
+    }
+
+    .dummy-photo {
+      width: 200px; /* Adjusted width for smaller screens */
+      height: 200px; /* Adjusted height */
+    }
+
+    .button-container {
+      margin-left: 5%; /* Reduced side margins */
+      margin-right: 5%; /* Reduced side margins */
+    }
+
+    .button-container button {
+      width: 100%; /* Full width for buttons */
+      margin-bottom: 10px; /* Space between buttons */
+    }
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    body {
+      padding: 5px; /* Further reduce padding */
+    }
+
+    .position-title {
+      font-size: 1.2em; /* Smaller title size */
+    }
+
+    .salary-tag,
+    .profession-tag {
+      font-size: 11px; /* Further reduce font size for tags */
+      padding: 4px 10px; /* Further reduced padding */
+    }
+
+    .dummy-photo {
+      width: 150px; /* Smaller width */
+      height: 150px; /* Smaller height */
+    }
+
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      margin-left: 0; /* Remove left margin */
+      margin-right: 0; /* Remove right margin */
+    }
+
+    .button-container button {
+      width: 100%; /* Full width for mobile */
+    }
+  }
