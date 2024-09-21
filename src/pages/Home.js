@@ -1,23 +1,21 @@
 import React from "react";
 import "../assests/css/ProjectStyles.css";
+import { useNavigate } from "react-router-dom";
 import Homepage from "../assests/images/Homepage.png";
 import Homeround from "../assests/images/Ellipse-85.png";
 import HomeDot from "../assests/images/Dot.png";
 import AboutBG from "../assests/images/About-BG.png";
 import Spotlight from "../assests/images/technologySpotlight.png";
 
-function home() {
+function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <main className="futureminds">
         <section className="futureminds-button">
           <h1>FUTUREMINDZ</h1>
           <h5>Visualize. Transform. Succeed.</h5>
-          <button>
-            <a href="/contact-us" target="_self">
-              Learn More
-            </a>
-          </button>
+          <button onClick={() => navigate('contact-us')}>Learn More</button>
         </section>
         <section className="futureminds-images">
           <img
@@ -27,7 +25,7 @@ function home() {
             loading="lazy"
           />
           <img
-            className="round "
+            className="round"
             src={Homeround}
             alt="Responsive Design Example"
             loading="lazy"
@@ -51,12 +49,11 @@ function home() {
         </section>
         <section className="content-section">
           <div className="elementor-element-populated">
-          <div className="divider-about">
-            <div className="elementor-divider-separator"></div>
-            <h2> About Us</h2>
-          </div>
-          <div className="description">
-            
+            <div className="divider-about">
+              <div className="elementor-divider-separator"></div>
+              <h2> About Us</h2>
+            </div>
+            <div className="description">
               <p>
                 FutureMindz LLC is a IT Consulting Services company established
                 in 2016. We specialize in providing scalable Implementation and
@@ -74,8 +71,8 @@ function home() {
                 set up an exploratory call to identify how our consulting
                 services can help your business needs.
               </p>
-          </div>
-          <button>Learn More</button>
+            </div>
+            <button onClick={() => navigate("/contact-us")}>Learn More</button>
           </div>
         </section>
       </main>
@@ -142,4 +139,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;
