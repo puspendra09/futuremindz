@@ -26,25 +26,24 @@ app.post("/send-email", (req, res) => {
     },
   });
 
-  const filePath = path.join(__dirname, './public/' + resumeName); // Correct file path
+  const filePath = path.join(__dirname, "./public/" + resumeName); // Correct file path
 
-  // Check if the file exists before attempting to attach it
-  if (!fs.existsSync(filePath)) {
-    return res.status(404).send("File not found");
-  }
-
-  const mailOptions = {
+  let mailOptions = {
     from: name,
     to: email,
     subject: "Contact Form Request",
-    text: `Hi ${name}, trying to contact you, ${message} Please find attached file`,
-    attachments: [
+    text: `Hi ${name}, trying to contact you, ${message} Please find attached file`
+  };
+
+  // Check if the file exists before attempting to attach it
+  if (fs.existsSync(filePath)) {
+    mailOptions.attachments = [
       {
         filename: resumeName,
         path: filePath,
       },
-    ],
-  };
+    ]
+  }
 
   transporter.sendMail(mailOptions, (error) => {
     if (error) {

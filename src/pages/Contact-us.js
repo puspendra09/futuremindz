@@ -57,7 +57,7 @@ function ContactUs() {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://your-api-endpoint.com/send-message",
+          "https://www.futuremindz.com/apisend-email",
           formData
         );
         setResponseMessage("Message sent successfully!");
