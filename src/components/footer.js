@@ -10,8 +10,8 @@ function Footer() {
             <img
               src={Logo}
               alt="Futuremindz"
-              height={50}
-              width={50}
+              height={121}
+              width={184}
               className="d-inline-block align-text-top"
             />
           </a>

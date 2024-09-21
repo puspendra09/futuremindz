@@ -85,15 +85,15 @@ function home() {
             <span className="divider-separator" />
             <h4>TECHNOLOGY SPOTLIGHT</h4>
           </div>
-          <div className="description">
-            <h5>
+          <div className="description1">
+            <p>
               In addition to ERP adoption, we also provide consulting services
               by experienced professionals in Data Analytics, Cybersecurity,
               Software Development and Testing and AWS. Our full cycle services
               delivered by top-notch experts are laser focused on scalability,
               configuration, information security, and maintainability in all
               enterprise software application projects.
-            </h5>
+            </p>
           </div>
           <div className="checkbox-container">
             <div className="checkbox-group">

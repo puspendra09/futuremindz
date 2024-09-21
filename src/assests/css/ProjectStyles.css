@@ -84,6 +84,7 @@ img {
 }
 .Technology-Spotlight-data{
     width: 60%;
+    margin: 30px 40px;
 }
 .Technology-Spotlight-img{
     width: 40%;
@@ -92,6 +93,7 @@ img {
 .checkbox-container {
     color: white;
     width: 60%;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -141,11 +143,11 @@ a {
     margin-bottom: 20px; /* Space below the description */
 }
 
-.description h5 {
+.description1 {
     line-height: 1.6; /* Adjust line spacing for readability */
     margin: 0; /* Remove default margin */
-    font-size: 18px; /* Adjust font size if needed */
-    color: #333; /* Adjust text color for better contrast */
+    font-size: 16px; /* Adjust font size if needed */
+    color: gray /* Adjust text color for better contrast */
 }
 
 .checkbox-group {
