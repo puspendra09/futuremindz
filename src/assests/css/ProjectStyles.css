@@ -87,7 +87,8 @@ img {
 }
 
 .dropdown-item:hover {
-    background-color: transparent; /* Change background on hover */
+    background-color: #fff;
+    color: #c36;
 }
 
 .Technology-Spotlight {
@@ -278,7 +279,12 @@ a {
 }
 
 .form-container p {
-    color: gray
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
 }
 
 .form-row {

@@ -1,0 +1,52 @@
+ [
+    {
+        "id": 1,
+        "title": "NETWORK ENGINEER",
+        "description": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "salary": "$3,222 - $3,222",
+        "location": "Florida, London",
+        "industry": "IT",
+        "date": "22-09-2024",
+        "image": "name"
+    },
+    {
+        "id": 2,
+        "title": "Software Developer – Paramus, NJ and various unanticipated US locations",
+        "description": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "salary": "$3,222 - $3,222IT",
+        "location": "Florida, London",
+        "industry": "Beauty Salon",
+        "date": "21-09-2024",
+        "image": "name"
+    },
+    {
+        "id": 3,
+        "title": "DATABASE ADMINISTRATORS",
+        "description": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "salary": "$3,222 - $3,222",
+        "location": "Florida, London",
+        "industry": "Beauty Salon",
+        "date": "21-09-2024",
+        "image": "name"
+    },
+    {
+        "id": 4,
+        "title": "SOFTWARE ENGINEER",
+        "description": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "salary": "$3,222 - $3,222",
+        "location": "Florida, London",
+        "industry": "IT",
+        "date": "21-09-2024",
+        "image": "name"
+    },
+    {
+        "id": 5,
+        "title": "Software Developer – Paramus, NJ and various unanticipated US locations",
+        "description": "Job Overview Design/develop software systems using UNIX/SQL/Oracle/PLSQL/Java/C# etc. Testing/validation and programming. Travel/relocate to unanticipated ...",
+        "salary": "",
+        "location": " NJ",
+        "industry": "IT",
+        "date": "21-09-2024",
+        "image": "name"
+    }
+ ]
