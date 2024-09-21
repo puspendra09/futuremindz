@@ -1,16 +1,17 @@
 import React from "react";
 import "../assests/css/ProjectStyles.css";
-import Logo from "../assests/images/FuturemindzLogo.svg";
 import Homepage from "../assests/images/Homepage.png";
-import Spotlight from "../assests/images/technologySpotlight.png"
+import Homeround from "../assests/images/Ellipse-85.png";
+import HomeDot from "../assests/images/Dot.png";
+import AboutBG from "../assests/images/About-BG.png";
+import Spotlight from "../assests/images/technologySpotlight.png";
 
 function home() {
   return (
     <>
-      <main>
-        <section>
+      <main className="futureminds">
+        <section className="futureminds-button">
           <h1>FUTUREMINDZ</h1>
-          <h1></h1>
           <h5>Visualize. Transform. Succeed.</h5>
           <button>
             <a href="/contact-us" target="_self">
@@ -18,51 +19,71 @@ function home() {
             </a>
           </button>
         </section>
-        <section id="img-section">
+        <section className="futureminds-images">
           <img
             className="section1_img"
             src={Homepage}
             alt="Responsive Design Example"
             loading="lazy"
           />
+          <img
+            className="round "
+            src={Homeround}
+            alt="Responsive Design Example"
+            loading="lazy"
+          />
+          <img
+            className="round Dot-images"
+            src={HomeDot}
+            alt="Responsive Design Example"
+            loading="lazy"
+          />
         </section>
       </main>
-      <main className="">
-        <section id="home-section">
-          <div className="homepage-container">
-            {/* Embed your current homepage content here */}
-            <h1>Welcome to FutureMindz</h1>
-            <p>Your partner in IT Consulting and Digital Transformation.</p>
-            <button>Explore Our Services</button>
-          </div>
+      <main className="about-main">
+        <section className="about-main-img">
+          <img
+            className="round Dot-images"
+            src={AboutBG}
+            alt="Responsive Design Example"
+            loading="lazy"
+          />
         </section>
         <section className="content-section">
+          <div className="elementor-element-populated">
           <div className="divider-about">
-            <span className="divider-about-separator" />
-            <h2 style={{ fontWeight: "bolder" }}>About Us</h2>
+            <div className="elementor-divider-separator"></div>
+            <h2> About Us</h2>
           </div>
           <div className="description">
-            <p>
-              FutureMindz LLC is an IT Consulting Services company established
-              in 2016. We specialize in providing scalable implementation and
-              production support services to support Enterprise Resource
-              Planning (ERP) adoption projects in mid-level to large
-              organizations. Headquartered in New Jersey, our team drives
-              digital transformation for companies nationwide in the United
-              States through partnerships with prime vendors. Need more
-              information? Please don’t hesitate to contact us and set up an
-              exploratory call to identify how our consulting services can help
-              your business needs.
-            </p>
+            
+              <p>
+                FutureMindz LLC is a IT Consulting Services company established
+                in 2016. We specialize in providing scalable Implementation and
+                Production support services to support Enterprise Resource
+                Planning (ERP) adoption projects in mid-level to large
+                organizations.
+              </p>
+              <p>
+                Headquartered in New Jersey, our team drives digital
+                transformation for companies nationwide in the United States
+                through partnerships with prime vendors.
+              </p>
+              <p>
+                Need more information? Please don’t hesitate to contact us and
+                set up an exploratory call to identify how our consulting
+                services can help your business needs.
+              </p>
           </div>
           <button>Learn More</button>
+          </div>
         </section>
       </main>
       <main className="Technology-Spotlight">
-        <section className="content-section">
+        <section className="Technology-Spotlight-data">
           <div className="divider">
             <span className="divider-separator" />
-            <h4 style={{ fontWeight: "bolder" }}>TECHNOLOGY SPOTLIGHT</h4>
+            <h4>TECHNOLOGY SPOTLIGHT</h4>
           </div>
           <div className="description">
             <h5>
@@ -113,12 +134,8 @@ function home() {
             </div>
           </div>
         </section>
-        <section id="img-section">
-          <img
-            src={Spotlight}
-            alt="Responsive Design Example"
-            loading="lazy"
-          />
+        <section className="Technology-Spotlight-img">
+          <img src={Spotlight} alt="Responsive Design Example" loading="lazy" />
         </section>
       </main>
     </>

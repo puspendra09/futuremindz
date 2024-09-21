@@ -1,6 +1,6 @@
 import React from "react";
 import '../assests/css/ProjectStyles.css'
-import Logo from "../assests/images/FuturemindzLogo.svg";
+import Logo from "../assests/images/logo.png";
 
 function Header() {
   return (
