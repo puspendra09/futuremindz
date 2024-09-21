@@ -2,7 +2,8 @@
 body {
     font-family: "Roboto", "Sans-serif";
     margin: 0;
-    padding: 0;
+    padding: 0  !important;
+    font-family: "Roboto", sans-serif !important;
 }
 
 nav {
@@ -13,22 +14,7 @@ nav {
     padding: 16px; /* Added padding for better spacing */
 }
 
-main {
-    display: flex;
-    justify-content: space-between; /* Space out sections */
-    align-items: center;
-    gap: 40px; /* Increased gap for more space */
-    height: 80vh;
-    padding: 64px; /* Padding around main content */
-}
 
-section {
-    max-width: 50%; /* Limit width for text content */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center;
-    gap: 18px; /* Space between items */
-}
 
 button {
     font-family: "Roboto", Sans-serif;
@@ -59,24 +45,18 @@ h1 {
     align-items: center;
 }
 
-.section1_img {
-    width: 100%; /* Make image responsive */
-    max-width: 700px; /* Limit maximum width */
-    height: 700px; /* Maintain aspect ratio */
-    border-bottom-left-radius: 200px; /* Optional: Rounded corners */
-}
+
 
 img {
     width: 100%; /* Make image responsive */
     max-width: 500px; /* Limit maximum width */
-    height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: Rounded corners */
 }
 
 .navbar {
-    margin-bottom: 20px; /* Adds space below the navbar */
     padding: 10px 20px; /* Adds padding inside the navbar */
-    background-color: #f8f9fa; /* Light background color */
+    background-color: transparent !important
+    ; /* Light background color */
 }
 
 .navbar-nav {
@@ -99,10 +79,21 @@ img {
 
 .Technology-Spotlight {
     background-color: #C9DCEA;
+    padding: 8% 7% 8% 7%;
+    display: flex;
+}
+.Technology-Spotlight-data{
+    width: 60%;
+}
+.Technology-Spotlight-img{
+    width: 40%;
 }
 
 .checkbox-container {
-    color: white; /* Text color */
+    color: white;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .checkbox-container label {
@@ -306,6 +297,98 @@ button {
     display: none; /* Hidden elements */
 }
 
+.about-main{
+    padding: 8% 7% 8% 7%;
+    display: inline-block;
+}
+
+.futureminds{
+    padding: 0% 0% 0% 7%;
+    display: flex;
+    align-items: center;
+}
+.futureminds-button{
+    width: 40.332%;
+}
+.futureminds-button h1 {
+    text-align: left;
+    color: #015A9C;
+    font-family: "Roboto", Sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.futureminds-button h5{
+    color: #565656;
+        font-family: "Roboto", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        margin-bottom: 20px;
+}
+.futureminds-button button{
+    margin-top: 20px;
+}
+.futureminds-images{
+    width: 59.224%;
+    float: left;
+    position: relative;
+}
+.futureminds-images img{
+    border-radius: 0px 0px 0px 200px;
+    width: 100%;
+    max-width: 842px;
+}
+.futureminds-images .round{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: -30px;
+    border-radius: inherit;
+    z-index: -1;
+    margin: -30px 0px 0px 0px;
+}
+.futureminds-images .Dot-images{
+    bottom: 0;
+}
+section.about-main-img {
+    width: 40%;
+    float: left;
+}
+.elementor-element-populated{
+    margin: 0px 0px 0px 100px;
+}
+.divider-about {
+    display: flex;
+    margin-left: -80px;
+    margin-bottom: 40px;
+}
+.content-section .description{
+    margin-bottom: 40px;
+}
+.about-main .content-section h2 {
+    color: #1D2130;
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.about-main .content-section p {
+    color: #525560;
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.elementor-divider-separator{
+    width: 60px;
+    height: 1.5px;
+    background: #000;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     nav {
@@ -370,6 +453,19 @@ button {
 
     .form-group:last-child {
         margin-bottom: 0; /* No margin for the last field */
+    }
+    .futureminds{
+        padding: 0 15px;
+    }
+    .futureminds-button, .futureminds-images{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .section.about-main-img , .content-section{
+        width: 100%;
+    }
+    .elementor-element-populated{
+        margin: 0;
     }
 }
 
