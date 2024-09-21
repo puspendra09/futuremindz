@@ -25,6 +25,8 @@ function ContactUs() {
             <img src={contactus2} alt="Placeholder Image" />
           </div>
           <div className="form-container">
+            <h1>LET’S CHAT</h1>
+            <p>Fill out the form below and we’ll get in touch with you right away!</p>
             <form id="contact-form">
               <div className="form-row">
                 <div className="form-group sendmsg">
@@ -65,7 +67,7 @@ function ContactUs() {
                   The field is required.
                 </span>
               </div>
-              <button type="submit" id="sendmsg">
+              <button id="sendmsg">
                 Send Message
               </button>
             </form>

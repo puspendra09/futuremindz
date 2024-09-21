@@ -230,7 +230,6 @@ a {
 
 .form-section {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     padding: 40px;
@@ -245,15 +244,23 @@ a {
     align-items: center;
 }
 
-.contact-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bolder;
-    margin-bottom: 30px;
+.contact-header {
+    margin-bottom: 50px;
+    margin-top: 85px;
 }
+
+.contact-header h1 {
+    color: #015A9C;
+    font-family: "Roboto", Sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: none;
+}
+
 .image-container img {
     max-width: 300px;
+    margin-left: 33px;
+    margin-top: 60px;
     height: auto;
     border-radius: 10px;
 }
@@ -262,6 +269,16 @@ a {
     max-width: 800px;
     display: flex;
     flex-direction: column;
+}
+
+.form-container h1 {
+    color: #015A9C;
+    font-family: "Roboto", Sans-serif;
+    text-align: left;
+}
+
+.form-container p {
+    color: gray
 }
 
 .form-row {
@@ -293,7 +310,6 @@ button {
     background-color: #015A9C; /* Button background color */
     color: white; /* Button text color */
     border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
 }
 
