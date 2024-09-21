@@ -19,6 +19,14 @@ nav {
     padding-right: 90px;
 }
 
+.dropdown-menu {
+    border: 0px;
+    background: transparent;
+}
+
+.dropdown-menu a {
+    color: #c36;
+}
 
 button {
     font-family: "Roboto", Sans-serif;
@@ -79,7 +87,7 @@ img {
 }
 
 .dropdown-item:hover {
-    background-color: #cad3cb; /* Change background on hover */
+    background-color: transparent; /* Change background on hover */
 }
 
 .Technology-Spotlight {
