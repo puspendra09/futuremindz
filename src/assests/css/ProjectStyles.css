@@ -67,6 +67,11 @@ img {
     margin: 0; /* Remove default margin */
     font-weight: 500; /* Slightly bolder text */
     transition: color 0.3s; /* Smooth color transition */
+    color: #c36;
+}
+
+.nav-link:hover {
+    color: #336 !important;
 }
 
 .nav-link:hover {
