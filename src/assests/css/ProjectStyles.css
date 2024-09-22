@@ -461,12 +461,28 @@ section.about-main-img {
         width: 100%;
         margin-bottom: 10px;
     }
-    .section.about-main-img , .content-section{
+    .about-main-img , .content-section{
         width: 100%;
     }
     .elementor-element-populated{
         margin: 0;
     }
+    .about-main-img{
+        width: 100% !important;
+    }
+    .divider-about{
+        margin-left: 0;
+        margin-bottom: 20px;
+    margin-top: 40px;
+    }
+    .Technology-Spotlight {
+        padding: 0;
+    }
+
+    .Technology-Spotlight-data , .Technology-Spotlight-img{
+        width: 100%
+    }
+
 }
 
 @media (max-width: 480px) {
