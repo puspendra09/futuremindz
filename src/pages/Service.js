@@ -12,7 +12,7 @@ import JavaImg from "../assests/images/java.jpg";
 
 function service() {
   return (
-    <>
+    <div className="mainSection">
       <h1>SERVICES</h1>
       <div className="service">
         <img src={Workday} alt="Workday" />
@@ -124,7 +124,7 @@ function service() {
       <h1 style={{ textAlign: "center" }}>
         Find a top-quality, specialized consultant today.
       </h1>
-    </>
+    </div>
   );
 }
 
