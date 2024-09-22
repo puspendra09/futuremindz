@@ -73,9 +73,13 @@ img {
     color: #336 !important;
 }
 
+.dropdown-item {
+    color: #c36;
+}
+
 .dropdown-item:hover {
     background-color: #fff;
-    color: #c36;
+    color: #336;
 }
 
 .Technology-Spotlight {
@@ -166,6 +170,10 @@ a {
     align-items: center; /* Center vertically */
     padding: 40px; /* Padding around the section */
     background-color: #f0f8ff; /* Light background color */
+}
+
+.dropdown-menu {
+    border: none;
 }
 
 .homepage-container {

@@ -12,7 +12,7 @@ import JavaImg from "../assests/images/java.jpg";
 
 function service() {
   return (
-    <>
+    <div className="mainSection">
       <h1>SERVICES</h1>
       <div className="service">
         <img src={Workday} alt="Workday" />
@@ -125,10 +125,14 @@ function service() {
       <h1>
       Find a top-quality, specialized consultant today.
       </h1>
+<<<<<<< HEAD
       <button>Contact Us</button>
       </div>
      
     </>
+=======
+    </div>
+>>>>>>> 6447a500922e82e75acf2c7e40c9f5786f40a37d
   );
 }
 

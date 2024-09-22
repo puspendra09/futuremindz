@@ -22,6 +22,15 @@ h1 {
   min-height: 250px; /* Set a consistent minimum height for all services */
   position: relative; /* For positioning the invisible line */
 }
+
+.mainSection h1 {
+  color: #015A9C;
+  font-family: "Roboto", Sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: none;
+}
+
 .service h1{
   color: #54595f;
     font-family: "Roboto", Sans-serif;
