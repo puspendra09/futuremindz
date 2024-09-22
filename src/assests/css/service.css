@@ -22,6 +22,22 @@ h1 {
   min-height: 250px; /* Set a consistent minimum height for all services */
   position: relative; /* For positioning the invisible line */
 }
+.service h1{
+  color: #54595f;
+    font-family: "Roboto", Sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: none;
+    line-height: 43px;
+    text-align: left;
+}
+.service p{
+  color: #54595f;
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
 .service:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
 }
@@ -29,8 +45,8 @@ h1 {
   flex-direction: row-reverse; /* Zigzag effect for even items */
 }
 .service img {
-  width: 300px; /* Doubled the width for images */
-  margin: 10px; /* Add margin around images */
+  width: 270px; /* Doubled the width for images */
+  margin: 20px; /* Add margin around images */
   border-radius: 10px; /* Round image corners */
 }
 .service::after {
@@ -46,6 +62,15 @@ h1 {
   text-transform: uppercase; /* Capitalize text */
 }
 
+@media screen and (min-width: 768px) and (max-width: 1000px) { 
+  .service{
+    margin: 20px 2%;
+  }
+  .service img {
+    width: 200px;
+    margin: 10px;
+}
+}
 /* Tablet Styles */
 @media (max-width: 768px) {
   body {
@@ -70,6 +95,15 @@ h1 {
   h1 {
     font-size: 20px; /* Adjust heading size */
   }
+  .service {
+    text-align: center;
+    margin: 28px;
+}
+.service h1{
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+}
 }
 
 /* Mobile Styles */
@@ -82,10 +116,7 @@ h1 {
     font-size: 20px; /* Smaller heading size */
   }
 
-  .service {
-    margin: 15px 0; /* Margin adjustments for mobile */
-    padding: 10px; /* Further reduced padding */
-  }
+  
 
   .service img {
     display: none; /* Hide images on mobile */

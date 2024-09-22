@@ -7,14 +7,14 @@ import AboutBG from "../assests/images/About-BG.png";
 import Spotlight from "../assests/images/technologySpotlight.png";
 
 function Home() {
-  const navigate = useNavigate();
+ 
   return (
     <>
       <main className="futureminds">
         <section className="futureminds-button">
           <h1>FUTUREMINDZ</h1>
           <h5>Visualize. Transform. Succeed.</h5>
-          <button onClick={() => navigate('contact-us')}>Learn More</button>
+          <button>Learn More</button>
         </section>
         <section className="futureminds-images">
           <img

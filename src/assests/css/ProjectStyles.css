@@ -95,6 +95,7 @@ img {
     width: 60%;
     display: flex;
     justify-content: space-between;
+    margin: 60px 60px 0px 80px;
 }
 
 .checkbox-container label {
@@ -126,14 +127,14 @@ a {
 .divider {
     display: flex;
     align-items: center; /* Center the line and text */
-    width: 50%; /* Full width */
+    width: 40%; /* Full width */
     margin-bottom: 20px; /* Space below the divider */
 }
 
 .divider-separator {
     flex-grow: 1; /* Make the line grow */
-    height: 2px; /* Thickness of the line */
-    background-color: #015A9C; /* Line color */
+    height: 1.5px; /* Thickness of the line */
+    background-color: #1D2130; /* Line color */
     margin: 0 10px; /* Space around the line */
 }
 

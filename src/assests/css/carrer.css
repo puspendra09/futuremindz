@@ -78,7 +78,6 @@ body {
     justify-content: flex-start; /* Align items to the start */
     padding-bottom: 20px; /* Bottom padding for each job container */
     padding: 5px; /* Corrected padding syntax */
-    border: 1px solid lightgray;
     margin-left: 17%; /* Margin between job containers */
     margin-right: 17%; /* Margin between job containers */
   }
@@ -98,7 +97,6 @@ body {
     border: 1px solid lightgray; /* Light border for buttons */
     color: #0056b3; /* Dark blue text */
     transition: background-color 0.3s, color 0.3s, outline 0.3s; /* Smooth transition for hover effects */
-    height: 40px; /* Height of the buttons */
     width: 150px; /* Width of the buttons */
     cursor: pointer; /* Pointer cursor on hover */
     outline: 2px solid transparent; /* Default outline */
@@ -116,6 +114,7 @@ body {
   }
   /* Tablet Styles */
   @media (max-width: 768px) {
+    
     body {
       padding: 10px; /* Reduce padding on body */
     }
@@ -148,6 +147,7 @@ body {
     .button-container {
       margin-left: 5%; /* Reduced side margins */
       margin-right: 5%; /* Reduced side margins */
+      width: 100%;
     }
 
     .button-container button {

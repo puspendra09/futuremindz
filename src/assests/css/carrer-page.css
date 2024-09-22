@@ -87,16 +87,13 @@ textarea {
 p {
   flex-grow: 1; /* Allow paragraph to grow */
   margin: 0; /* Remove default margin */
-  overflow: auto; /* Handle overflow */
 }
 .upload-header {
   color: #015a9c;
   font-weight: bold;
 }
 
-.container {
-  margin-bottom: 50px;
-}
+
 
 .submitBtn {
   background-color: #015A9C;
@@ -110,9 +107,28 @@ p {
   color: #fff;
   border: #015A9C;
 }
+.Technology-Spotlight-data h4 {
+  color: #1D2130;
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.Technology-Spotlight-data .description1{
+  margin: 0px 60px 0px 80px;
+    color: #525560;
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
 
 /* Tablet Styles */
 @media (max-width: 768px) {
+  .career-item{
+    max-width: 100%;
+  }
   body {
     padding: 10px; /* Reduce padding on body */
   }
@@ -126,6 +142,7 @@ p {
     flex-direction: column; /* Stack career items */
     gap: 40px; /* Reduced gap */
     height: auto; /* Adjust height */
+    margin-bottom: 20px;
   }
 
   .career-item {
