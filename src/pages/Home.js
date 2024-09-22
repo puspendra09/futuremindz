@@ -6,18 +6,15 @@ import HomeDot from "../assests/images/Dot.png";
 import AboutBG from "../assests/images/About-BG.png";
 import Spotlight from "../assests/images/technologySpotlight.png";
 
-function home() {
+function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <main className="futureminds">
         <section className="futureminds-button">
           <h1>FUTUREMINDZ</h1>
           <h5>Visualize. Transform. Succeed.</h5>
-          <button>
-            <a href="/contact-us" target="_self">
-              Learn More
-            </a>
-          </button>
+          <button onClick={() => navigate('contact-us')}>Learn More</button>
         </section>
         <section className="futureminds-images">
           <img
@@ -85,15 +82,15 @@ function home() {
             <span className="divider-separator" />
             <h4>TECHNOLOGY SPOTLIGHT</h4>
           </div>
-          <div className="description">
-            <h5>
+          <div className="description1">
+            <p>
               In addition to ERP adoption, we also provide consulting services
               by experienced professionals in Data Analytics, Cybersecurity,
               Software Development and Testing and AWS. Our full cycle services
               delivered by top-notch experts are laser focused on scalability,
               configuration, information security, and maintainability in all
               enterprise software application projects.
-            </h5>
+            </p>
           </div>
           <div className="checkbox-container">
             <div className="checkbox-group">
@@ -142,4 +139,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;

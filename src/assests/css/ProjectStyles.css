@@ -15,7 +15,6 @@ nav {
 }
 
 
-
 button {
     font-family: "Roboto", Sans-serif;
     font-size: 16px;
@@ -67,14 +66,16 @@ img {
     margin: 0; /* Remove default margin */
     font-weight: 500; /* Slightly bolder text */
     transition: color 0.3s; /* Smooth color transition */
+    color: #c36;
 }
 
 .nav-link:hover {
-    color: #32cd32; /* Change color on hover */
+    color: #336 !important;
 }
 
 .dropdown-item:hover {
-    background-color: #cad3cb; /* Change background on hover */
+    background-color: #fff;
+    color: #c36;
 }
 
 .Technology-Spotlight {
@@ -141,11 +142,11 @@ a {
     margin-bottom: 20px; /* Space below the description */
 }
 
-.description h5 {
+.description1 {
     line-height: 1.6; /* Adjust line spacing for readability */
     margin: 0; /* Remove default margin */
-    font-size: 18px; /* Adjust font size if needed */
-    color: #333; /* Adjust text color for better contrast */
+    font-size: 16px; /* Adjust font size if needed */
+    color: gray /* Adjust text color for better contrast */
 }
 
 .checkbox-group {
@@ -215,7 +216,6 @@ a {
 
 .form-section {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     padding: 40px;
@@ -230,15 +230,23 @@ a {
     align-items: center;
 }
 
-.contact-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bolder;
-    margin-bottom: 30px;
+.contact-header {
+    margin-bottom: 50px;
+    margin-top: 85px;
 }
+
+.contact-header h1 {
+    color: #015A9C;
+    font-family: "Roboto", Sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: none;
+}
+
 .image-container img {
     max-width: 300px;
+    margin-left: 33px;
+    margin-top: 60px;
     height: auto;
     border-radius: 10px;
 }
@@ -247,6 +255,21 @@ a {
     max-width: 800px;
     display: flex;
     flex-direction: column;
+}
+
+.form-container h1 {
+    color: #015A9C;
+    font-family: "Roboto", Sans-serif;
+    text-align: left;
+}
+
+.form-container p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
 }
 
 .form-row {
@@ -278,7 +301,6 @@ button {
     background-color: #015A9C; /* Button background color */
     color: white; /* Button text color */
     border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
 }
 

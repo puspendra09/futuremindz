@@ -6,14 +6,12 @@ function CareerPage() {
   return (
     <>
       <div className="container">
-        <h1 className="career-header">
-          <p>
+          <p className="career-header">
             Whether you are a seasoned professional or a new graduate, we
             definitely have existing and upcoming projects to pique your
             interest. Get in touch with one of our recruiters today to find out
             more.
           </p>
-        </h1>
         <div className="career-container">
           <div className="career-item career-section new-job-seeker">
             <h2 className="career-subheader">New Job Seekers</h2>
@@ -29,10 +27,12 @@ function CareerPage() {
               positions where you can best practice your skills and advance in
               your chosen career.
             </p>
+            <br/>
             <p>
               For visa holders, our in-house legal team ensures that you are
               always in compliance with US guidelines on immigration and labor.
             </p>
+            <br/>
             <p>
               Upload your resume below so that one of our recruiters can reach
               out to answer any questions you might have. We look forward to
@@ -45,7 +45,7 @@ function CareerPage() {
               We are constantly welcoming new employees to our team. If you are
               a consultant with expertise in Workday, Salesforce, Data
               Analytics, AWS, or Cybersecurity, looking for new opportunities
-              for growth, please scroll through our Career Opportunities page to
+              for growth, please scroll through our <strong><a href="/career" style={{color: "#015A9C"}}>Career Opportunities</a></strong> page to
               find out more about our current job openings. We definitely have
               existing and upcoming projects to pique your interest.
             </p>
@@ -100,7 +100,7 @@ function CareerPage() {
             <small className="form-text text-muted">No file chosen</small>
             {/* "No file chosen" text */}
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn submitBtn">
             Submit
           </button>
         </form>
