@@ -125,14 +125,9 @@ function service() {
       <h1>
       Find a top-quality, specialized consultant today.
       </h1>
-<<<<<<< HEAD
       <button>Contact Us</button>
       </div>
-     
-    </>
-=======
     </div>
->>>>>>> 6447a500922e82e75acf2c7e40c9f5786f40a37d
   );
 }
 
