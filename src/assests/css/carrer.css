@@ -19,10 +19,8 @@ body {
     max-width: 1000px; /* Set a maximum width */
     height: auto; /* Set a uniform height */
   }
-  .position-title {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: #007bff;
+  .position-title {font-size: 18px;
+    color: #262626;
   }
   .details {
     margin: 5px 0;
@@ -112,9 +110,22 @@ body {
   .button-container button:focus {
     outline: 2px solid #0056b3; /* Outline color when focused */
   }
+
+  
+.service-flex{
+  flex: 1;
+}
+.title{
+  color: #015A9C;
+    font-family: "Roboto", Sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+}
   /* Tablet Styles */
   @media (max-width: 768px) {
-    
+    .job-container{
+      flex-direction: column;
+    }
     body {
       padding: 10px; /* Reduce padding on body */
     }

@@ -1,6 +1,5 @@
 import React from "react";
 import "../assests/css/carrer.css";
-import Logo from "../assests/images/FuturemindzLogo.svg";
 import Datascience from "../assests/images/datascience.jpg";
 import JavaImg from "../assests/images/java.jpg";
 import Workday from "../assests/images/workday.png";
@@ -16,7 +15,7 @@ function Career() {
 
   return (
     <>
-      <h1 className="text-center">Join Us</h1>
+      <h1 className="text-center title">Join Us</h1>
       <div className="job-container-toggle">
         <div className="button-container">
           <button onclick="toggleJobs('group1')">List Date</button>
@@ -30,7 +29,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={Datascience} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">NETWORK ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -54,7 +53,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={JavaImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">NETWORK ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -88,7 +87,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={Workday} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">DATABASE ADMINISTRATORS</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -112,7 +111,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={PythonImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">SOFTWARE ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -136,7 +135,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={SalesforceImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">
                 Software Developer – Paramus, NJ and various unanticipated US
                 locations
@@ -163,7 +162,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={Workday} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">NETWORK ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -187,7 +186,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={PythonImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">SOFTWARE ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -208,7 +207,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={JavaImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">NETWORK ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -242,7 +241,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={SalesforceImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">DATABASE ADMINISTRATORS</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and
@@ -266,7 +265,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={PythonImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">
                 Software Developer – Paramus, NJ and various unanticipated US
                 locations
@@ -293,7 +292,7 @@ function Career() {
             <span className="dummy-photo">
               <img src={SalesforceImg} alt="Profile Photo" />
             </span>
-            <div>
+            <div className="service-flex">
               <div className="position-title">SOFTWARE ENGINEER</div>
               <div className="details">
                 Design, Install and configure LAN, WAN management, Internet and

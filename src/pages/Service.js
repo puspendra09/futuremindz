@@ -121,9 +121,13 @@ function service() {
           </p>
         </div>
       </div>
-      <h1 style={{ textAlign: "center" }}>
-        Find a top-quality, specialized consultant today.
+      <div className="Find-top">
+      <h1>
+      Find a top-quality, specialized consultant today.
       </h1>
+      <button>Contact Us</button>
+      </div>
+     
     </>
   );
 }
