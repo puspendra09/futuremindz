@@ -54,12 +54,21 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
+      let postData = formData;
+      postData.subject = `Hi ${formData?.name}, trying to reach you.`
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://www.futuremindz.com/apisend-email",
+          "https:///www.futuremindz.com/apisend-email",
           formData
         );
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          mobile: "",
+          message: "",
+        });
         setResponseMessage("Message sent successfully!");
       } catch (error) {
         setResponseMessage("An error occurred while sending the message.");
