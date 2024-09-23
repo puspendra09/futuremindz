@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import "../assests/css/carrer-page.css"; // Ensure this path is correct
-import Logo from "../assests/images/FuturemindzLogo.svg"; // Ensure this path is correct
-
+import "../assests/css/carrer-page.css";
 function CareerPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -61,25 +59,45 @@ function CareerPage() {
     return Object.keys(newErrors).length === 0; // Return true if no errors
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formValid = validateForm();
 
-    console.log("formValid ", formValid);
-
     if (formValid) {
-      console.log("Form submitted successfully:", formData);
-      alert("Your application has been submitted successfully!");
+      try {
+        const formDataAPI = new FormData();
+        formDataAPI.append("resume", formData.resume);
+        formDataAPI.append("name", formData.name);
+        formDataAPI.append("email", formData.email);
+        formDataAPI.append("subject", `Need Assistance Finding Relevant Job Listings`);
+        formDataAPI.append("message", formData.message);
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-        resume: null,
-      });
-      setErrors({});
+        const response = await fetch("https://www.futuremindz.com/apisend-email", {
+          method: "POST",
+          body: formDataAPI,
+        });
+
+        if (response.ok) {
+          alert("Your application has been submitted successfully!");
+
+          // Reset form
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+            resume: null,
+          });
+          setErrors({});
+        } else {
+          alert("Failed to submit the form. Please try again later.");
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert(
+          "An error occurred while submitting the form. Please try again later."
+        );
+      }
     } else {
       // Trigger browser's built-in validation UI
       e.target.reportValidity();

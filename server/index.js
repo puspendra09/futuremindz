@@ -60,6 +60,7 @@ app.post("/send-email", upload.single('resume'), (req, res) => {
   const filePath = path.join(__dirname, "./public/" + resumeName);
   
   if (fs.existsSync(filePath)) {
+    console.log(`Resume file found: ${resumeName}`)
     mailOptions.attachments = [
       {
         filename: resumeName,

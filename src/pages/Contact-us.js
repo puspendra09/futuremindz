@@ -55,11 +55,11 @@ function ContactUs() {
     e.preventDefault();
     if (validateForm()) {
       let postData = formData;
-      postData.subject = `Hi ${formData?.name}, trying to reach you.`
+      postData.subject = `Need Assistance Finding Relevant Job Listings`
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https:///www.futuremindz.com/apisend-email",
+          "https://www.futuremindz.com/apisend-email",
           formData
         );
         setFormData({
