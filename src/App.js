@@ -6,6 +6,7 @@ import Career from "./pages/Career"
 import ContactUs from "./pages/Contact-us"
 import CareerPage from "./pages/Career-page"
 import Service from "./pages/Service"
+import JobPage from "./pages/JobPage"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
            <Route path="contact-us" element={<ContactUs />} />
            <Route path="career-page" element={<CareerPage />} />
            <Route path="service" element={<Service />} />
+           <Route path="/listings/:alias" element={<JobPage />} />
          </Route>
        </Routes>
        <Footer />

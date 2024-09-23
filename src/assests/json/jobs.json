@@ -1,0 +1,62 @@
+ [
+    {
+        "id": 4,
+        "title": "NETWORK ENGINEER",
+        "alias": "network-engineer",
+        "shortDescription": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "description": "<div><p>Design, Install and configure LAN, WAN management, Internet and network security and configuration of Cisco Catalyst switches 6500, 4000 and 3750 series and routers according to the Network Design.</p><p><strong>Job Overview</strong></p><p>Design, Install and configure LAN, WAN management, Internet and network security and configuration of Cisco Catalyst switches 6500, 4000 and 3750 series and routers according to the Network Design. Configured routing protocol OSPF, EIGRP, BGP. Configuring and implementing routing protocols such as RIP, OSPF and Static routing on Juniper M and MX series Router. Design and Implement network design using TCP/IP. Troubleshoot and technical support for Global wide area network consisting of Multi-Protocol label switching MPLS, VPN and point-to point site.</p><p><strong>Education and Experience Requirements</strong></p><p>Masters degree in Computer Science (any), Engineering (any), MBA (any) or alternatively a Bachelor’s degree (any) with 5 years of relevant experience in lieu of a Masters degree.</p></div>",
+        "salary": "$3,222 - $3,222",
+        "location": "Florida, London",
+        "industry": "IT",
+        "date": "08-08-2024",
+        "image": "datascience.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Software Developer – Paramus, NJ and various unanticipated US locations",
+        "alias": "Software-Developer-Paramus-US",
+        "shortDescription": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "description": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "salary": "$3,222 - $3,222IT",
+        "location": "Florida, London",
+        "industry": "Beauty Salon",
+        "date": "12-07-2024",
+        "image": "java.jpg"
+    },
+    {
+        "id": 1,
+        "title": "DATABASE ADMINISTRATORS",
+        "alias": "database-administrators",
+        "shortDescription": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "description": "<div><p>Design, Install and configure LAN, WAN management, Internet and network security and configuration of Cisco Catalyst switches 6500, 4000 and 3750 series and routers according to the Network Design.</p><p><strong>Job Overview</strong></p><p>Design, Install and configure LAN, WAN management, Internet and network security and configuration of Cisco Catalyst switches 6500, 4000 and 3750 series and routers according to the Network Design. Configured routing protocol OSPF, EIGRP, BGP. Configuring and implementing routing protocols such as RIP, OSPF and Static routing on Juniper M and MX series Router. Design and Implement network design using TCP/IP. Troubleshoot and technical support for Global wide area network consisting of Multi-Protocol label switching MPLS, VPN and point-to point site.</p><p><strong>Education and Experience Requirements</strong></p><p>Masters degree in Computer Science (any), Engineering (any), MBA (any) or alternatively a Bachelor’s degree (any) with 5 years of relevant experience in lieu of a Masters degree.</p></div>",
+        "salary": "$3,222 - $3,222",
+        "location": "Florida, London",
+        "industry": "Beauty Salon",
+        "date": "10-09-2024",
+        "image": "workday.png"
+    },
+    {
+        "id": 2,
+        "title": "SOFTWARE ENGINEER",
+        "alias": "software-engineer2",
+        "shortDescription": "Design, Install and configure LAN, WAN management, Internet and network security and ...",
+        "description": "<div><p>Design, Install and configure LAN, WAN management, Internet and network security and configuration of Cisco Catalyst switches 6500, 4000 and 3750 series and routers according to the Network Design.</p><p><strong>Job Overview</strong></p><p>Design, Install and configure LAN, WAN management, Internet and network security and configuration of Cisco Catalyst switches 6500, 4000 and 3750 series and routers according to the Network Design. Configured routing protocol OSPF, EIGRP, BGP. Configuring and implementing routing protocols such as RIP, OSPF and Static routing on Juniper M and MX series Router. Design and Implement network design using TCP/IP. Troubleshoot and technical support for Global wide area network consisting of Multi-Protocol label switching MPLS, VPN and point-to point site.</p><p><strong>Education and Experience Requirements</strong></p><p>Masters degree in Computer Science (any), Engineering (any), MBA (any) or alternatively a Bachelor’s degree (any) with 5 years of relevant experience in lieu of a Masters degree.</p></div>",
+        "salary": "$3,222 - $3,222",
+        "location": "Florida, London",
+        "industry": "IT",
+        "date": "21-09-2024",
+        "image": "salesforce.png"
+    },
+    {
+        "id": 5,
+        "title": "Software Developer",
+        "alias": "software-developer",
+        "shortDescription": "Job Overview Design/develop software systems using UNIX/SQL/Oracle/PLSQL/Java/C# etc. Testing/validation and programming. Travel/relocate to unanticipated ...",
+        "description": "<div><p><span><strong>Job Overview</strong></span></p><p>Design/develop software systems using UNIX/SQL/Oracle/PLSQL/Java/C# etc.</p><p>Testing/validation and programming. Travel/relocate to unanticipated locations/interact with clients/train end users.</p><p><span style='text-decoration: underline'><strong>Education and Experience Requirements</strong></span></p><p>Requires bachelor’s degree in any computer/Information systems/Engineering or closely related (foreign equivalent) + 2 yrs. of experience or master’s degree in any computer/Information Systems/Engineering or closely related (foreign equivalent)</p><p>Resume to Futuremindz, LLC, 140 E Ridgewood Ave. Ste. 415, Paramus, NJ 07652</p><p><a href='#'>Apply Now</a></p></div>",
+        "salary": "$3,222 - $3,222",
+        "location": "New York",
+        "industry": "IT",
+        "date": "15-09-2024",
+        "image": "python.jpg"
+    }
+ ]

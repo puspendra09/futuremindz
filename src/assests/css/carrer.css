@@ -12,15 +12,16 @@ body {
     height: auto;
   }
   .job-listing {
-    display: none; /* Initially hidden */
     padding: 15px;
     margin: 10px 10px; /* Left and right margin */
     width: 100%; /* Full width for proper centering */
     max-width: 1000px; /* Set a maximum width */
     height: auto; /* Set a uniform height */
   }
-  .position-title {font-size: 18px;
+  .position-title {
+    font-size: 18px;
     color: #262626;
+    cursor: pointer;
   }
   .details {
     margin: 5px 0;
@@ -70,13 +71,24 @@ body {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Darker shadow effect */
   }
 
+  .applyBtn {
+    font-family: "Roboto", Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #015A9C;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 40px 15px 40px;
+    color: #FFF;
+    margin-top: 30px;
+  }
+
   .job-container-toggle {
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: flex-start; /* Align items to the start */
-    padding-bottom: 20px; /* Bottom padding for each job container */
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 20px; 
     padding: 5px; /* Corrected padding syntax */
-    margin-left: 17%; /* Margin between job containers */
+    margin-left: 14%; /* Margin between job containers */
     margin-right: 17%; /* Margin between job containers */
   }
   .location-icon {
@@ -98,6 +110,8 @@ body {
     width: 150px; /* Width of the buttons */
     cursor: pointer; /* Pointer cursor on hover */
     outline: 2px solid transparent; /* Default outline */
+    padding: 0px;
+    border-radius: 7px;
   }
 
   .button-container button:hover,
@@ -110,6 +124,10 @@ body {
   .button-container button:focus {
     outline: 2px solid #0056b3; /* Outline color when focused */
   }
+
+.mainjobPage {
+  margin: 25px 55px;
+}
 
   
 .service-flex{

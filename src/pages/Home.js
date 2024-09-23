@@ -1,5 +1,6 @@
 import React from "react";
 import "../assests/css/ProjectStyles.css";
+import { useNavigate } from "react-router-dom";
 import Homepage from "../assests/images/Homepage.png";
 import Homeround from "../assests/images/Ellipse-85.png";
 import HomeDot from "../assests/images/Dot.png";
@@ -7,14 +8,14 @@ import AboutBG from "../assests/images/About-BG.png";
 import Spotlight from "../assests/images/technologySpotlight.png";
 
 function Home() {
- 
+  const navigate = useNavigate();
   return (
     <>
       <main className="futureminds">
         <section className="futureminds-button">
           <h1>FUTUREMINDZ</h1>
           <h5>Visualize. Transform. Succeed.</h5>
-          <button>Learn More</button>
+          <button onClick={() => navigate('contact-us')}>Learn More</button>
         </section>
         <section className="futureminds-images">
           <img
@@ -72,7 +73,7 @@ function Home() {
                 services can help your business needs.
               </p>
           </div>
-          <button>Learn More</button>
+          <button  onClick={() => navigate('contact-us')}>Learn More</button>
           </div>
         </section>
       </main>
