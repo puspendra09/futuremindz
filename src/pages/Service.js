@@ -9,8 +9,10 @@ import DevopsImg from "../assests/images/devops.jpg";
 import BusinessAnalyst from "../assests/images/Business_Analyst.jpg";
 import SalesforceImg from "../assests/images/salesforce.png";
 import JavaImg from "../assests/images/java.jpg";
+import { useNavigate } from "react-router-dom";
 
-function service() {
+function Service() {
+  const navigate = useNavigate();
   return (
     <div className="mainSection">
       <h1>SERVICES</h1>
@@ -125,10 +127,10 @@ function service() {
       <h1>
       Find a top-quality, specialized consultant today.
       </h1>
-      <button>Contact Us</button>
+      <button onClick={() => navigate('/contact-us')}>Contact Us</button>
       </div>
     </div>
   );
 }
 
-export default service;
+export default Service;
