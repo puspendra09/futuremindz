@@ -54,14 +54,51 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      let postData = formData;
-      postData.subject = `Need Assistance Finding Relevant Job Listings`
+      let contentAdminMessage = `<p>Dear Futuremindz,</p>
+                          <p>I hope this message finds you well. I recently came across your website and would like to inquire about product, service…etc.</p>
+                          <p>Here are my details as requested:</p>
+                          <ul><li>Name: ${formData.name}</li></ul>
+                          <ul><li>Company: ${formData.company}</li></ul>
+                          <ul><li>Email: ${formData.email}</li></ul>
+                          <ul><li>Mobile No: ${formData.mobile}</li></ul>
+                          <ul><li>Message: ${formData.message}</li></ul>`;
+      let postAdminData = {
+        email: "Druna@futuremindzllc.com, prathima@futuremindzllc.com",
+        name: formData.name,
+        subject: `Inquiry from ${formData.company}`,
+        message: contentAdminMessage,
+      };
       setIsSubmitting(true);
       try {
         const response = await axios.post(
           "https://www.futuremindz.com/apisend-email",
-          formData
+          postAdminData
         );
+        let contentUserMessage = `<p>Dear ${formData.name},</p>
+        <p>Thank you for reaching out to us. We have received your message and our team will review your inquiry shortly. We will get back to you as soon as possible, usually within 24 hours.</p>
+        <p>Here are the details we received from you:</p>
+        <ul><li>Name: ${formData.name}</li></ul>
+        <ul><li>Company: ${formData.company}</li></ul>
+        <ul><li>Email: ${formData.email}</li></ul>
+        <ul><li>Mobile No: ${formData.mobile}</li></ul>
+        <ul><li>Message: ${formData.message}</li></ul>
+        <p>If you need any immediate assistance, feel free to contact us directly at +1 (718) 213-7876 or info@futuremindzllc.com</p>
+        <p>We appreciate your interest and look forward to assisting you soon!</p>`;
+        let postUserData = {
+          email: "puspendras20@gmail.com",
+          name: "Futuremindz Team",
+          subject: `Thank You for Contacting Us, ${formData.name}`,
+          message: contentUserMessage,
+        };
+        setIsSubmitting(true);
+        try {
+          const response = await axios.post(
+            "https://www.futuremindz.com/apisend-email",
+            postUserData
+          );
+        } catch (error) {
+          console.error(error);
+        }
         setFormData({
           name: "",
           company: "",

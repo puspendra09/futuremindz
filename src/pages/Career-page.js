@@ -65,17 +65,65 @@ function CareerPage() {
 
     if (formValid) {
       try {
-        const formDataAPI = new FormData();
-        formDataAPI.append("resume", formData.resume);
-        formDataAPI.append("name", formData.name);
-        formDataAPI.append("email", formData.email);
-        formDataAPI.append("subject", `Need Assistance Finding Relevant Job Listings`);
-        formDataAPI.append("message", formData.message);
+        const adminContent = `<p>Dear [FutureMindz/HR Team],</p>
+                              <p>We wanted to inform you that a new application has been submitted through the website</p>
+                              <p>Here are the details of the applicant:</p>
+                              <ul><li>Name: ${formData.name}</li></ul>
+                              <ul><li>Email: ${formData.email}</li></ul>
+                              <ul><li>Phone Number: ${formData.phone}</li></ul>
+                              <ul><li>Please find attached CV</li></ul><br />
+                              <p>The CV and application details have been forwarded for your review. Please feel free to reach out to the candidate directly if you need any additional information or would like to schedule an interview.</p>
+                              <p>If you require assistance in processing this application or further details, feel free to contact us.</p><br />
+                              <p>Best regards,</p>
+                              <p>${formData.name}</p>`;
 
-        const response = await fetch("https://www.futuremindz.com/apisend-email", {
-          method: "POST",
-          body: formDataAPI,
-        });
+        const postAdminData = new FormData();
+        postAdminData.append("resume", formData.resume);
+        postAdminData.append("name", formData.name);
+        postAdminData.append(
+          "email",
+          "Druna@futuremindzllc.com, prathima@futuremindzllc.com"
+        );
+        postAdminData.append(
+          "subject",
+          `New CV Submission: ${formData.name} Applied`
+        );
+        postAdminData.append("message", adminContent);
+
+        const response = await fetch(
+          "https://www.futuremindz.com/apisend-email",
+          {
+            method: "POST",
+            body: postAdminData,
+          }
+        );
+
+        const userContent = `<p>Dear ${formData.name},</p>
+                              <p>Thank you for submitting your CV through our website at FutureMindz. We have received your application and will review it carefully to assess your suitability for the position.</p>
+                              <p>Here are the details we have received from you:</p>
+                              <ul><li>Name: ${formData.name}</li></ul>
+                              <ul><li>Email: ${formData.email}</li></ul>
+                              <ul><li>Phone Number: ${formData.phone}</li></ul>
+                              <ul><li>CV: Submission confirmed</li></ul><br />
+                              <p>Our recruitment team will be in touch if your profile matches the requirements of the role. In the meantime, if you have any questions or need further information, feel free to reach out to us at info@futuremindzllc.com.</p>
+                              <p>We appreciate your interest in joining FutureMindz and wish you the best of luck with your application!</p><br />
+                              <p>Best regards,</p>
+                              <p>FutureMindz</p>`;
+
+        const postUserData = {
+          email: formData.email,
+          subject: `Thank You for Submitting Your CV, ${formData.name}`,
+          name: "Futuremindz Team",
+          message: userContent
+        }
+
+        const responseAPI = await fetch(
+          "https://www.futuremindz.com/apisend-email",
+          {
+            method: "POST",
+            body: postUserData,
+          }
+        );
 
         if (response.ok) {
           alert("Your application has been submitted successfully!");

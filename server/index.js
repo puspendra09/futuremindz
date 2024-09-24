@@ -33,13 +33,6 @@ app.post("/send-email", upload.single('resume'), (req, res) => {
   const { name, email, subject, message } = req.body;
   let resumeName = req.file ? req.file.filename : null;
 
-  // if (resumeName) {
-  //   resumeName = resumeName.replace(/[^a-zA-Z0-9]/g, '-'); // Sanitize filename
-  // } else {
-  //   console.log("No resume uploaded.");
-  //   return res.status(400).send("No resume uploaded."); // Return error if no file is uploaded
-  // }
-
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -53,14 +46,14 @@ app.post("/send-email", upload.single('resume'), (req, res) => {
     from: name,
     to: email,
     subject: subject,
-    text: message,
+    html: message, // Use 'html' property to send HTML content
   };
 
   // Attach the uploaded resume if it exists
   const filePath = path.join(__dirname, "./public/" + resumeName);
   
   if (fs.existsSync(filePath)) {
-    console.log(`Resume file found: ${resumeName}`)
+    console.log(`Resume file found: ${resumeName}`);
     mailOptions.attachments = [
       {
         filename: resumeName,
