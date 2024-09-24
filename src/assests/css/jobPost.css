@@ -1,0 +1,125 @@
+/* Header Styles */
+h2 {
+    text-align: center;
+    color: #343a40; /* Darker text for better readability */
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* jobPost.css */
+.mainAdminPost {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group .ql-container {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group .ql-container {
+    min-height: 200px;
+    background-color: #fff;
+  }
+  
+  .form-group .ql-toolbar {
+    border: 1px solid #ccc;
+    border-bottom: none;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+/* Input and Label Styles */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057; /* Slightly muted color for labels */
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da; /* Light border for inputs */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Error Message Styles */
+p.error {
+    color: #dc3545; /* Bootstrap danger color for errors */
+    font-size: 14px;
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded button corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Editor Styles */
+.DraftEditor-root {
+    border-radius: 8px; /* Match editor with input styles */
+}
+
+.DraftEditor-editorContainer {
+    min-height: 150px; /* Ensures the editor has enough space */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px; /* Smaller button text on mobile */
+        padding: 10px; /* Smaller button padding on mobile */
+        width: 100%; /* Full width button on mobile for better touch targets */
+        margin-top: 10px; /* Add space above button on mobile view */
+    }
+}

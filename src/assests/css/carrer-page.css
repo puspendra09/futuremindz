@@ -16,6 +16,13 @@ body {
   font-weight: bold;
 }
 
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+  background-color: #015A9C;
+  color: #fff;
+  border: #015A9C;
+  width: 100%;
+}
+
 .career-section {
   border: 2px solid; /* Default border color */
   border-radius: 20px;

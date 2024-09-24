@@ -7,6 +7,8 @@ import ContactUs from "./pages/Contact-us"
 import CareerPage from "./pages/Career-page"
 import Service from "./pages/Service"
 import JobPage from "./pages/JobPage"
+import AdminLogin from "./pages/AdminLogin"
+import AdminJobPost from "./pages/AdminJobPost"
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
            <Route path="career-page" element={<CareerPage />} />
            <Route path="service" element={<Service />} />
            <Route path="/listings/:alias" element={<JobPage />} />
+           <Route path="/admin" element={<AdminLogin />} />
+           <Route path="/admin/job-post" element={<AdminJobPost />} />
          </Route>
        </Routes>
        <Footer />
