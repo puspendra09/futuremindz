@@ -85,7 +85,7 @@ function ContactUs() {
         <p>If you need any immediate assistance, feel free to contact us directly at +1 (718) 213-7876 or info@futuremindzllc.com</p>
         <p>We appreciate your interest and look forward to assisting you soon!</p>`;
         let postUserData = {
-          email: "puspendras20@gmail.com",
+          email: formData.email,
           name: "Futuremindz Team",
           subject: `Thank You for Contacting Us, ${formData.name}`,
           message: contentUserMessage,

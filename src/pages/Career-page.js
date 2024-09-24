@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../assests/css/carrer-page.css";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 function CareerPage() {
   const location = useLocation();
   const job = location.state?.job;
@@ -16,9 +17,6 @@ function CareerPage() {
 
   const handleChange = (e) => {
     const { id, value, files } = e.target;
-    console.log(id);
-    console.log(value);
-    console.log(files);
     if (id === "name") {
       setErrors({ ...errors, name: "" });
     }
@@ -56,7 +54,6 @@ function CareerPage() {
     if (!formData.message) newErrors.message = "Message is required.";
 
     if (!formData.resume) newErrors.resume = "Resume is required.";
-
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0; // Return true if no errors
@@ -70,8 +67,8 @@ function CareerPage() {
       try {
         const adminContent = `<p>Dear [FutureMindz/HR Team],</p>
                               <p>We wanted to inform you that a new application has been submitted through the website ${
-                                job.title
-                                  ? " for the position of " + job.title
+                                job?.title
+                                  ? " for the position of " + job?.title
                                   : ""
                               }.</p>
                               <p>Here are the details of the applicant:</p>
@@ -79,9 +76,9 @@ function CareerPage() {
                               <ul><li>Email: ${formData.email}</li></ul>
                               <ul><li>Phone Number: ${formData.phone}</li></ul>
                               ${
-                                job.title
+                                job?.title
                                   ? "<ul><li>Position Applied For: " +
-                                    job.title +
+                                    job?.title +
                                     "</li></ul>"
                                   : ""
                               }
@@ -114,8 +111,8 @@ function CareerPage() {
 
         const userContent = `<p>Dear ${formData.name},</p>
                               <p>Thank you for submitting your CV through our website ${
-                                job.title
-                                  ? "for the " + job.title + " role"
+                                job?.title
+                                  ? "for the " + job?.title + " role"
                                   : ""
                               } at FutureMindz. We have received your application and will review it carefully to assess your suitability for the position.</p>
                               <p>Here are the details we have received from you:</p>
@@ -123,9 +120,9 @@ function CareerPage() {
                               <ul><li>Email: ${formData.email}</li></ul>
                               <ul><li>Phone Number: ${formData.phone}</li></ul>
                               ${
-                                job.title
+                                job?.title
                                   ? "<ul><li>Position Applied For: " +
-                                    job.title +
+                                    job?.title +
                                     "</li></ul>"
                                   : ""
                               }
@@ -142,12 +139,9 @@ function CareerPage() {
           message: userContent,
         };
 
-        const responseAPI = await fetch(
+        const responseAPI = await axios.post(
           "https://www.futuremindz.com/apisend-email",
-          {
-            method: "POST",
-            body: postUserData,
-          }
+          postUserData
         );
 
         if (response.ok) {
@@ -161,6 +155,7 @@ function CareerPage() {
             message: "",
             resume: null,
           });
+          document.getElementById('resume').value = '';
           setErrors({});
         } else {
           alert("Failed to submit the form. Please try again later.");
@@ -303,7 +298,7 @@ function CareerPage() {
 
         {/* Submit Button */}
         <button type="button" onClick={handleSubmit} className="btn submitBtn">
-          Submit
+          {"Submit"}
         </button>
       </div>
     </div>
