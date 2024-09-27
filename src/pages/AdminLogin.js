@@ -32,8 +32,6 @@ const AdminLogin = () => {
       } else {
         setErrorMessage("Invalid username and password");
       }
-      console.log("Login successful:", { email, password });
-      // Here you would typically send a request to your login API
     }
   };
 

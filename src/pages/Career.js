@@ -3,22 +3,29 @@ import "../assests/css/carrer.css";
 import { useNavigate } from "react-router-dom";
 import jobsData from "../assests/json/jobs.json";
 import jobImage from "../assests/images/job.png";
+import axios from "axios";
 
 function Career() {
   const navigate = useNavigate();
   const [sortedJobs, setSortedJobs] = useState([]);
+  const [jobs, setJobs] = useState([]);
   const [selectedIndustry, setSelectedIndustry] = useState(null);
 
   useEffect(() => {
-    if (jobsData && jobsData.length > 0) {
-      setSortedJobs(jobsData);
-    } else {
-      console.error("jobsData is empty or not properly loaded.");
-    }
+    getJobs();
   }, []);
 
+  const getJobs = async () => {
+    const response = await axios.get(
+      "http://localhost:3001/jobs"
+    );
+    if(response.status === 200) {
+      setSortedJobs(response?.data);
+    }
+  };
+
   function sortJobs(criteria) {
-    let sortedArray = [...jobsData];
+    let sortedArray = [...sortedJobs];
     if (criteria === "listDateAsc") {
       sortedArray.sort((a, b) => new Date(a.date) - new Date(b.date));
     } else if (criteria === "lastUpdateDesc") {
@@ -31,7 +38,7 @@ function Career() {
 
   function filterByIndustry(industry) {
     setSelectedIndustry(industry);
-    const filteredJobs = jobsData.filter((job) => job.industry === industry);
+    const filteredJobs = sortedJobs.filter((job) => job.industry === industry);
     setSortedJobs(filteredJobs);
   }
 

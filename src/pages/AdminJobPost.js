@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
 import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css"; // Import Quill styles
-import "../assests/css/jobPost.css"; // Your custom CSS
+import "react-quill/dist/quill.snow.css";
+import "../assests/css/jobPost.css"; // Ensure the path is correct
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function AdminJobPost() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    jobTitle: "",
+    title: "",
     company: "",
-    jobDescription: "",
+    description: "",
     salary: "",
     location: "",
     industry: "",
   });
 
   const [errors, setErrors] = useState({});
+  const [error, setError] = useState(null);
 
+  // Check user authentication
   useEffect(() => {
     const userEmail = localStorage.getItem("userEmail");
     if (!userEmail) {
@@ -24,21 +27,24 @@ function AdminJobPost() {
     }
   }, [navigate]);
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Handle rich text editor changes
   const handleEditorChange = (value) => {
-    setFormData({ ...formData, jobDescription: value });
+    setFormData({ ...formData, description: value });
   };
 
+  // Validate form fields
   const validate = () => {
     const newErrors = {};
-    if (!formData.jobTitle) newErrors.jobTitle = "Job title is required";
+    if (!formData.title) newErrors.title = "Job title is required";
     if (!formData.company) newErrors.company = "Company name is required";
-    if (!formData.jobDescription || formData.jobDescription === '<p><br></p>') {
-      newErrors.jobDescription = "Job description is required";
+    if (!formData.description || formData.description === "<p><br></p>") {
+      newErrors.description = "Job description is required";
     }
     if (!formData.salary) newErrors.salary = "Salary is required";
     if (!formData.location) newErrors.location = "Location is required";
@@ -46,43 +52,62 @@ function AdminJobPost() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validate form data
     const formErrors = validate();
+    
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
-    } else {
-      console.log("Job Data Submitted:", formData);
-      // Add API submission logic here
+      return; // Stop further execution if there are errors
+    }
+
+    try {
+      // Make API call to post job
+      await axios.post("http://localhost:3001/jobs", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      // Clear errors and show success message
       setErrors({});
-      // Reset the form if needed
+      setError(null);
+      alert("Job posted successfully!");
+      window.location.reload();
       setFormData({
-        jobTitle: "",
+        title: "",
         company: "",
-        jobDescription: "",
+        description: "",
         salary: "",
         location: "",
         industry: "",
       });
+      
+    } catch (err) {
+      // Handle error from API call
+      setError(err.response?.data?.message || err.message || "An error occurred while posting the job.");
     }
   };
 
   return (
     <div className="mainAdminPost">
       <h2>Post a Job</h2>
+      {error && <span style={{ color: "red" }}>{error}</span>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="jobTitle">Job Title:</label>
+          <label htmlFor="title">Job Title:</label>
           <input
             type="text"
-            id="jobTitle"
-            name="jobTitle"
-            value={formData.jobTitle}
+            id="title"
+            name="title"
+            value={formData.title}
             onChange={handleChange}
           />
-          {errors.jobTitle && <p style={{ color: "red" }}>{errors.jobTitle}</p>}
+          {errors.title && <p style={{ color: "red" }}>{errors.title}</p>}
         </div>
-
         <div className="form-group">
           <label htmlFor="company">Company:</label>
           <input
@@ -94,21 +119,19 @@ function AdminJobPost() {
           />
           {errors.company && <p style={{ color: "red" }}>{errors.company}</p>}
         </div>
-
         <div className="form-group">
-          <label htmlFor="jobDescription">Job Description:</label>
+          <label htmlFor="description">Job Description:</label>
           <ReactQuill
-            value={formData.jobDescription}
+            value={formData.description}
             onChange={handleEditorChange}
-            modules={AdminJobPost.modules} // Custom modules for the toolbar
-            formats={AdminJobPost.formats} // Formats allowed
+            modules={AdminJobPost.modules}
+            formats={AdminJobPost.formats}
             placeholder="Enter job description here..."
           />
-          {errors.jobDescription && (
-            <p style={{ color: "red" }}>{errors.jobDescription}</p>
+          {errors.description && (
+            <p style={{ color: "red" }}>{errors.description}</p>
           )}
         </div>
-
         <div className="form-group">
           <label htmlFor="salary">Salary:</label>
           <input
@@ -154,21 +177,36 @@ function AdminJobPost() {
 // Quill modules for toolbar customization
 AdminJobPost.modules = {
   toolbar: [
-    [{ 'header': '1'}, { 'header': '2'}, { 'font': [] }],
-    [{size: []}],
-    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-    [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-    ['link', 'image', 'video'],
-    ['clean']
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+    ["clean"],
   ],
 };
 
 // Quill formats allowed in the editor
 AdminJobPost.formats = [
-  'header', 'font', 'size',
-  'bold', 'italic', 'underline', 'strike', 'blockquote',
-  'list', 'bullet', 'indent',
-  'link', 'image', 'video'
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
 ];
 
 export default AdminJobPost;
