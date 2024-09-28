@@ -71,7 +71,7 @@ function ContactUs() {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://www.futuremindz.com/api/send-email",
+          "https://futuremindz.com/api/send-email",
           postAdminData
         );
         let contentUserMessage = `<p>Dear ${formData.name},</p>
@@ -93,7 +93,7 @@ function ContactUs() {
         setIsSubmitting(true);
         try {
           const response = await axios.post(
-            "https://www.futuremindz.com/api/send-email",
+            "https://futuremindz.com/api/send-email",
             postUserData
           );
         } catch (error) {

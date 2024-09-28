@@ -92,7 +92,7 @@ function CareerPage() {
         postAdminData.append("message", adminContent);
 
         const response = await fetch(
-          "https://www.futuremindz.com/api/send-email",
+          "https://futuremindz.com/api/send-email",
           {
             method: "POST",
             body: postAdminData,

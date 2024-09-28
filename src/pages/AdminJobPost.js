@@ -66,7 +66,7 @@ function AdminJobPost() {
 
     try {
       // Make API call to post job
-      await axios.post("http://localhost:3001/jobs", formData, {
+      await axios.post("https://futuremindz.com/api/jobs", formData, {
         headers: {
           "Content-Type": "application/json",
         },
