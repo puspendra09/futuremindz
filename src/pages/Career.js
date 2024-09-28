@@ -17,7 +17,7 @@ function Career() {
 
   const getJobs = async () => {
     const response = await axios.get(
-      "http://futuremindz.com/api/jobs"
+      "https://futuremindz.com/api/jobs"
     );
     if(response.status === 200) {
       setSortedJobs(response?.data);
