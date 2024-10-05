@@ -15,7 +15,7 @@ function JobPage() {
 
   return (
     <div className="mainjobPage">
-      <h2>{job.title}</h2>
+      <h2>{job?.title}</h2>
       <div
         className="profession-tag"
         style={{ display: "inline-block", marginTop: 10 }}

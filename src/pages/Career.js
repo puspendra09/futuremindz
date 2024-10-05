@@ -10,16 +10,15 @@ function Career() {
   const [sortedJobs, setSortedJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
   const [selectedIndustry, setSelectedIndustry] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState(null); // New state for location
 
   useEffect(() => {
     getJobs();
   }, []);
 
   const getJobs = async () => {
-    const response = await axios.get(
-      "https://futuremindz.com/api/jobs"
-    );
-    if(response.status === 200) {
+    const response = await axios.get("https://futuremindz.com/api/jobs");
+    if (response.status === 200) {
       setSortedJobs(response?.data);
     }
   };
@@ -38,7 +37,15 @@ function Career() {
 
   function filterByIndustry(industry) {
     setSelectedIndustry(industry);
+    setSelectedLocation(null); // Reset location when filtering by industry
     const filteredJobs = sortedJobs.filter((job) => job.industry === industry);
+    setSortedJobs(filteredJobs);
+  }
+
+  function filterByLocation(location) {
+    setSelectedLocation(location);
+    setSelectedIndustry(null); // Reset industry when filtering by location
+    const filteredJobs = sortedJobs.filter((job) => job.location === location);
     setSortedJobs(filteredJobs);
   }
 
@@ -57,6 +64,9 @@ function Career() {
 
       {selectedIndustry && (
         <h2 className="text-center">{`Jobs in ${selectedIndustry}`}</h2>
+      )}
+      {selectedLocation && (
+        <h2 className="text-center">{`Jobs in ${selectedLocation}`}</h2>
       )}
 
       <div className="center-container">
@@ -91,11 +101,16 @@ function Career() {
                       {job.industry}
                     </div>
                   </div>
-                  <div className="details">
-                    <span>
-                      <i className="fas fa-map-marker-alt location-icon" />{" "}
-                      {job.location}
-                    </span>
+                  <div
+                    className="location-tag"
+                    onClick={() => filterByLocation(job.location)}
+                    style={{
+                      cursor: "pointer",
+                      marginLeft: "10px",
+                      marginTop: "20px",
+                    }}
+                  >
+                    {job.location}
                   </div>
                 </div>
               </div>
