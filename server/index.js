@@ -44,7 +44,7 @@ app.post("/jobs", (req, res) => {
   const formattedDate = `${day}-${month}-${year}`;
   newJob.id = currentTimestampInMilliseconds;
   newJob.alias = currentTimestampInMilliseconds;
-  newJob.shortDescription = extractFirst100Words(newJob.description);
+  newJob.shortDescription = extractFirst20Words(newJob.description);
   newJob.date = formattedDate;
 
   jsonData.push(newJob);
@@ -129,7 +129,7 @@ function removeEmpty(obj) {
   }, {});
 }
 
-function extractFirst100Words(html) {
+function extractFirst20Words(html) {
   // Remove HTML tags using regex
   const text = html
     .replace(/<[^>]*>/g, " ")
@@ -140,7 +140,7 @@ function extractFirst100Words(html) {
   const words = text.split(" ");
 
   // Get the first 100 words
-  const first100Words = words.slice(0, 100).join(" ");
+  const first100Words = words.slice(0, 20).join(" ");
 
   return first100Words;
 }
