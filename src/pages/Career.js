@@ -8,7 +8,6 @@ import axios from "axios";
 function Career() {
   const navigate = useNavigate();
   const [sortedJobs, setSortedJobs] = useState([]);
-  const [jobs, setJobs] = useState([]);
   const [selectedIndustry, setSelectedIndustry] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState(null); // New state for location
 
