@@ -73,7 +73,7 @@ function CareerPage() {
                                     job?.title +
                                     "</li></ul>"
                                   : ""
-                              }
+                              }<ul><li>Message: ${formData.message}</li></ul>
                               <ul><li>Please find attached CV</li></ul><br />
                               <p>Best regards,</p>
                               <p>${formData.name}</p>`;
@@ -94,6 +94,29 @@ function CareerPage() {
         const response = await fetch("https://futuremindz.com/api/send-email", {
           method: "POST",
           body: postAdminData,
+        });
+
+        let contentUserMessage = `<p>Dear ${formData.name},</p>
+        <p>Thank you for submitting your CV through our website for the at FutureMindz. We have received your application and will review it carefully to assess your suitability for the position.</p>
+        <p>Here are the details we have received from you:</p>
+        <ul><li>Name: ${formData.name}</li></ul>
+        <ul><li>Email: ${formData.email}</li></ul>
+        <ul><li>Mobile No: ${formData.mobile}</li></ul>
+        <ul><li>Message: ${formData.message}</li></ul>
+        <p>Our recruitment team will be in touch if your profile matches the requirements of the role. In the meantime, if you have any questions or need further information, feel free to reach out to us at info@futuremindzllc.com</p>
+        <p>We appreciate your interest in joining FutureMindz and wish you the best of luck with your application!</p>
+        <p>Best regards,</p>
+        <p>FutureMindz</p>`;
+        let postUserData = {
+          email: formData.email,
+          name: "Futuremindz Team",
+          subject: `Thank You for Submitting Your CV, ${formData.name}`,
+          message: contentUserMessage,
+        };
+
+        await fetch("https://futuremindz.com/api/send-email", {
+          method: "POST",
+          body: postUserData,
         });
 
         if (response.ok) {
