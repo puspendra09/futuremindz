@@ -114,10 +114,10 @@ function CareerPage() {
           message: contentUserMessage,
         };
 
-        await fetch("https://futuremindz.com/api/send-email", {
-          method: "POST",
-          body: postUserData,
-        });
+        await axios.post(
+          "https://futuremindz.com/api/send-email",
+          postUserData
+        );
 
         if (response.ok) {
           alert("Your application has been submitted successfully!");
