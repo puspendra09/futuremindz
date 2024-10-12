@@ -101,7 +101,12 @@ function CareerPage() {
         <p>Here are the details we have received from you:</p>
         <ul><li>Name: ${formData.name}</li></ul>
         <ul><li>Email: ${formData.email}</li></ul>
-        <ul><li>Mobile No: ${formData.mobile}</li></ul>
+        <ul><li>Mobile No: ${formData.phone}</li></ul>
+        ${
+          job?.title
+            ? "<ul><li>Position Applied For: " + job?.title + "</li></ul>"
+            : ""
+        }
         <ul><li>Message: ${formData.message}</li></ul>
         <p>Our recruitment team will be in touch if your profile matches the requirements of the role. In the meantime, if you have any questions or need further information, feel free to reach out to us at info@futuremindzllc.com</p>
         <p>We appreciate your interest in joining FutureMindz and wish you the best of luck with your application!</p>
